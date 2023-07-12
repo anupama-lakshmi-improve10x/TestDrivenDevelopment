@@ -40,7 +40,7 @@ public class FibonacciTest {
     }
 
     @Test
-    public void givenFour_returnTwo() {
+    public void givenFour_returnThree() {
         Fibonacci fibonacci = new Fibonacci();
         int fourthFibonacci = fibonacci.find(4);
         assertEquals(3, fourthFibonacci);
