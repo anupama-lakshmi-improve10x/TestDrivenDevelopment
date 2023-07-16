@@ -1,10 +1,12 @@
 package remainder;
 
 public class Reminder {
-    public int findRemainder(int a, int b) {
+    public int findRemainder(int a, int b) throws ArithmeticException {
         int result = 0;
-        result = a % b;
+        if (b != 0) {
+            result = a % b;
+        }
         return result;
-
     }
+
 }

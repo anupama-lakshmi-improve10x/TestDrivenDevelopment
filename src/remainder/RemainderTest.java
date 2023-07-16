@@ -22,14 +22,16 @@ public class RemainderTest {
      remainder(5, 5) ➞ 0*/
 
 
-   /* @Test
+   @Test
     public void remainderZeroAndOne_returns0() {
         Reminder reminder = new Reminder();
         int result = reminder.findRemainder(0,1);
         assertEquals(0, result);
     }
 
-    @Test
+    // if any number divided by zero it will give arthimethic expression
+
+   /* @Test
     public void remainderOneAndZero_returns1() {
         Reminder reminder = new Reminder();
         int result = reminder.findRemainder(1,0);
