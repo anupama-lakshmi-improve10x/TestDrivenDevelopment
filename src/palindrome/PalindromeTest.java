@@ -12,35 +12,31 @@ public class PalindromeTest {
     }
 
     @Test
-    public void givenOneNumber_returnTrue() {
+    public void givenNegativeNumber_returnFalse() {
+        Palindrome palindrome = new Palindrome();
+        boolean result = palindrome.findPalindrome(-12);
+        assertEquals(false, result);
+    }
+
+
+    @Test
+    public void givenOneDigitNumber_returnTrue() {
         Palindrome palindrome = new Palindrome();
         boolean result = palindrome.findPalindrome(1);
         assertEquals(true, result);
     }
 
     @Test
-    public void givenTwoNumber_returnFalse() {
-        Palindrome palindrome = new Palindrome();
-        boolean result = palindrome.findPalindrome(12);
-        assertEquals(false, result);
-    }
-
-    @Test
-    public void givenTwoDigitPalindromeNumber_returnTrue() {
+    public void givenTwoDigitNumberEleven_returnTrue() {
         Palindrome palindrome = new Palindrome();
         boolean result = palindrome.findPalindrome(11);
         assertEquals(true, result);
     }
+
     @Test
-    public void givenPalindrome_returnTrue() {
+    public void givenTwoDigitNumber_returnFalse() {
         Palindrome palindrome = new Palindrome();
-        boolean result = palindrome.findPalindrome(1111);
-        assertEquals(true, result);
-    }
-    @Test
-    public void givenPalindrome_returnFalse() {
-        Palindrome palindrome = new Palindrome();
-        boolean result = palindrome.findPalindrome(123);
+        boolean result = palindrome.findPalindrome(12);
         assertEquals(false, result);
     }
 
@@ -52,9 +48,22 @@ public class PalindromeTest {
     }
 
     @Test
-    public void givenNegativeNumber_returnFalse() {
+    public void givenPositivePalindrome_returnTrue() {
         Palindrome palindrome = new Palindrome();
-        boolean result = palindrome.findPalindrome(-12);
+        boolean result = palindrome.findPalindrome(121);
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void givenPalindrome_returnTrue() {
+        Palindrome palindrome = new Palindrome();
+        boolean result = palindrome.findPalindrome(1111);
+        assertEquals(true, result);
+    }
+    @Test
+    public void givenLongNumber_returnFalse() {
+        Palindrome palindrome = new Palindrome();
+        boolean result = palindrome.findPalindrome(12345);
         assertEquals(false, result);
     }
 }

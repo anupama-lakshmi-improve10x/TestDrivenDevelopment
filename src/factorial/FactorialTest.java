@@ -28,36 +28,36 @@ public class FactorialTest {
     @Test
     public void givenZeroFactorial_returnZero() {
         Factorial factorial = new Factorial();
-        int negativeNumber = factorial.findFactorial(0);
-        assertEquals(1, negativeNumber);
+        int ZeroNumber = factorial.findFactorial(0);
+        assertEquals(1, ZeroNumber);
     }
 
     @Test
     public void givenOneFactorial_returnOne() {
         Factorial factorial = new Factorial();
-        int negativeNumber = factorial.findFactorial(1);
-        assertEquals(1,negativeNumber);
+        int number = factorial.findFactorial(1);
+        assertEquals(1,number);
     }
 
     @Test
     public void givenTwoFactorial_returnTwo() {
         Factorial factorial = new Factorial();
-        int negativeNumber = factorial.findFactorial(2);
-        assertEquals(2,negativeNumber);
+        int result = factorial.findFactorial(2);
+        assertEquals(2,result);
     }
 
     @Test
     public void givenFourFactorial_returnTwentyFour() {
         Factorial factorial = new Factorial();
-        int negativeNumber = factorial.findFactorial(4);
-        assertEquals(24,negativeNumber);
+        int result = factorial.findFactorial(4);
+        assertEquals(24, result);
     }
 
     @Test
     public void givenFiveFactorial_returnOneHundredTwenty() {
         Factorial factorial = new Factorial();
-        int negativeNumber = factorial.findFactorial(5);
-        assertEquals(120,negativeNumber);
+        int result = factorial.findFactorial(5);
+        assertEquals(120, result);
     }
 
 }
