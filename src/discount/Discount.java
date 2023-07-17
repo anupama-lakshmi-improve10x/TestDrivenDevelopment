@@ -5,9 +5,9 @@ public class Discount {
         System.out.println(findDiscount(89, 20));
     }
 
-    public static float findDiscount(int price, int discountPercentage) {
-        float discount = price * discountPercentage/100;
-        float finalPrice = price - discount;
+    public static double findDiscount(int price, int discountPercentage) {
+        double discount = price * discountPercentage/100;
+        double finalPrice = price - discount;
         return finalPrice;
     }
 }
