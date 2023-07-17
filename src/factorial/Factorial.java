@@ -8,7 +8,7 @@ public class Factorial {
 
     public static int findFactorial(int num) {
         int fact = 1;
-        if(num <= 0) {
+        if(num < 0) {
             return -1;
         } else if(num > 1) {
             for(int i = 1; i<=num; i++) {
