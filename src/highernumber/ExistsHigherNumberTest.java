@@ -1,14 +1,27 @@
 package highernumber;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.testng.Assert.assertEquals;
 
 public class ExistsHigherNumberTest {
 
+    private  HigherNumber higherNumber;
+   @BeforeEach
+    public void setup() {
+       higherNumber = new HigherNumber();
+   }
+
     @Test
     public void nothing() {
 
+    }
+
+    @Test
+    public void givenArrayIsNegative_returnFalse() {
+        boolean result = higherNumber.existsHigher(new int[]{-1,-2,-8,-11, -29}, -11);
+        assertEquals(true, result);
     }
 
     @Test
