@@ -1,10 +1,19 @@
 package farmproblem;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.testng.Assert.assertEquals;
 
 public class FarmTest {
+
+    private  Farm farm;
+
+    @BeforeEach
+
+    public void setup() {
+        farm = new Farm();
+    }
 
     @Test
     public void nothing() {
@@ -17,29 +26,62 @@ public class FarmTest {
 */
 
     @Test
-    public void givenNoOfLegs_returnTotalLegs() {
-        Farm farm = new Farm();
-        int result = farm.findTotalLegs(2,3,5);
-        assertEquals(36, result);
-    }
-
-    @Test
-    public void givenNoOfLegsAsZero_returnNoOfLegs() {
-        Farm farm = new Farm();
-        int result = farm.findTotalLegs(0, 0, 0);
-        assertEquals(0, result);
-    }
-
-    @Test
-    public void givenNoOfLegsAsNegative_returnNoOfLegs() {
-        Farm farm = new Farm();
+    public void givenNoOfLegsAsNegativeValues_returnNoOfLegs() {
         int result = farm.findTotalLegs(-1, -3, -5);
         assertEquals(-34, result);
     }
 
     @Test
+    public void givenNoOfLegsAsNegative_returnNoOfLegs() {
+        int result = farm.findTotalLegs(0, -3, -5);
+        assertEquals(-32, result);
+    }
+
+    @Test
+    public void givenNoOfLegsAsNegativeChickensAndPigs_returnNoOfLegs() {
+        int result = farm.findTotalLegs(-2, 0, -1);
+        assertEquals(-8, result);
+    }
+
+    @Test
+    public void givenNoOfLegsAsNegativeChickensAndCows_returnNoOfLegs() {
+        int result = farm.findTotalLegs(-4, -2, 0);
+        assertEquals(-16, result);
+    }
+
+
+    @Test
+    public void givenNoOfLegsAsZero_returnNoOfLegs() {
+        int result = farm.findTotalLegs(0, 0, 0);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void givenNoOfLegsOfAnimals_returnNoOfLegs() {
+        int result = farm.findTotalLegs(0, 5, 8);
+        assertEquals(52, result);
+    }
+
+    @Test
+    public void givenNoOfLegsOfAnimals_returnTotalLegs() {
+        int result = farm.findTotalLegs(2,0,0);
+        assertEquals(4, result);
+    }
+
+    @Test
+    public void givenNoOfAnimalsLegs_returnTotalLegs() {
+        int result = farm.findTotalLegs(0,0,5);
+        assertEquals(20, result);
+    }
+
+    @Test
+    public void givenNoOfLegs_returnTotalLegs() {
+        int result = farm.findTotalLegs(2,3,5);
+        assertEquals(36, result);
+    }
+
+    @Test
     public void givenNoOfLegsAsPositiveAndNegative_returnNoOfLegs() {
-        Farm farm = new Farm();
         int result = farm.findTotalLegs(-1, 3, -5);
         assertEquals(-10, result);
     }
