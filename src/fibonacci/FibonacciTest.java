@@ -1,10 +1,18 @@
 package fibonacci;
 
 import static org.junit.Assert.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 public class FibonacciTest {
+    private Fibonacci fibonacci;
+
+    @BeforeEach
+    public  void setup() {
+        fibonacci = new Fibonacci();
+    }
 
     @Test
     public void nothing() {
@@ -20,28 +28,24 @@ public class FibonacciTest {
 
     @Test
     public void givenAnyFibonacciNegative_returnNegative1() {
-        Fibonacci fibonacci = new Fibonacci();
         int negativeFibonacci = fibonacci.find(-10);
         assertEquals(-1, negativeFibonacci);
     }
 
     @Test
     public void givenZero_returnZero() {
-        Fibonacci fibonacci = new Fibonacci();
         int zerothFibonacci = fibonacci.find(0);
         assertEquals(0, zerothFibonacci);
     }
 
     @Test
     public void givenOne_returnOne() {
-        Fibonacci fibonacci = new Fibonacci();
         int firstFibonacci = fibonacci.find(1);
         assertEquals(1, firstFibonacci);
     }
 
     @Test
     public void givenFour_returnThree() {
-        Fibonacci fibonacci = new Fibonacci();
         int fourthFibonacci = fibonacci.find(4);
         assertEquals(3, fourthFibonacci);
     }
