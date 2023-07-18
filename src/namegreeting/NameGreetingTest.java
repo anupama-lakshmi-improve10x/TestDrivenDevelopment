@@ -1,10 +1,18 @@
 package namegreeting;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.testng.Assert.assertEquals;
 
 public class NameGreetingTest {
+    private NameGreeting nameGreeting;
+
+    @BeforeEach
+
+    public void setup() {
+        nameGreeting = new NameGreeting();
+    }
 
     @Test
     public void nothing() {
@@ -20,16 +28,9 @@ public class NameGreetingTest {
 
     @Test
     public void givenHelloAndEmpty_returnHelloHelloEmpty() {
-        NameGreeting nameGreeting = new NameGreeting();
-        String name = nameGreeting.helloName("");
-        assertEquals("Hello !", name);
-    }
-    @Test
-    public void givenHelloAndName_returnHelloName() {
-        NameGreeting nameGreeting = new NameGreeting();
-        String name = nameGreeting.helloName("Gerald");
-        assertEquals("Hello Gerald!", name);
 
+        String name = nameGreeting.helloName(null);
+        assertEquals(null, name);
     }
 
     @Test
@@ -38,12 +39,25 @@ public class NameGreetingTest {
         String name = nameGreeting.helloName("");
         assertEquals("", name);
     }
+    @Test
+    public void givenHelloAndName_returnHelloName() {
+        NameGreeting nameGreeting = new NameGreeting();
+        String name = nameGreeting.helloName("Gerald");
+        assertEquals("Hello Gerald!", name);
+    }
 
     @Test
     public void givenHelloAndName_returnGivenHelloName() {
         NameGreeting nameGreeting = new NameGreeting();
         String name = nameGreeting.helloName("Ed");
         assertEquals("Hello Ed!", name);
+    }
+
+    @Test
+    public void givenHelloName_returnGivenHelloName() {
+        NameGreeting nameGreeting = new NameGreeting();
+        String name = nameGreeting.helloName("Anu");
+        assertEquals("Hello Anu!", name);
 
     }
 
