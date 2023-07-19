@@ -21,18 +21,39 @@ public class StringEndingTest {
     checkEnding("convention", "tio") ➞ false
 */
 
+
     @Test
-    public void givenEmptyString_returnTrue() {
+    public void givenNullString_returnTrue() {
         StringEndingMatches stringEndingMatches = new StringEndingMatches();
-        boolean result = stringEndingMatches.checkEnding("", "");
+        boolean result = stringEndingMatches.checkEnding(null, null);
         assertEquals(true, result);
     }
 
     @Test
-    public void givenTwoStringIfFirstStringEndsWithSecond_returnTrue() {
+    public void givenOneEmptyAndOtherNull_returnTrue() {
         StringEndingMatches stringEndingMatches = new StringEndingMatches();
-        boolean result = stringEndingMatches.checkEnding("abc", "bc");
+        boolean result = stringEndingMatches.checkEnding("", null);
+        assertEquals(false, result);
+    }
+
+    @Test
+    public void givenOneNullAndOtherEmpty_returnTrue() {
+        StringEndingMatches stringEndingMatches = new StringEndingMatches();
+        boolean result = stringEndingMatches.checkEnding(null, "");
+        assertEquals(false, result);
+    }
+
+    @Test
+    public void givenEmptyStrings_returnTrue() {
+        StringEndingMatches stringEndingMatches = new StringEndingMatches();
+        boolean result = stringEndingMatches.checkEnding("", "");
         assertEquals(true, result);
+    }
+    @Test
+    public void givenEmptyString_returnTrue() {
+        StringEndingMatches stringEndingMatches = new StringEndingMatches();
+        boolean result = stringEndingMatches.checkEnding(" ", "");
+        assertEquals(false, result);
     }
 
     @Test
@@ -48,4 +69,20 @@ public class StringEndingTest {
         boolean result = stringEndingMatches.checkEnding("", "abc");
         assertEquals(false, result);
     }
+
+    @Test
+    public void givenTwoStringIfFirstStringEndsWithSecond_returnTrue() {
+        StringEndingMatches stringEndingMatches = new StringEndingMatches();
+        boolean result = stringEndingMatches.checkEnding("abc", "bc");
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void givenTwoString_returnTrue() {
+        StringEndingMatches stringEndingMatches = new StringEndingMatches();
+        boolean result = stringEndingMatches.checkEnding("Anupama", "ma");
+        assertEquals(true, result);
+    }
+
+
 }
