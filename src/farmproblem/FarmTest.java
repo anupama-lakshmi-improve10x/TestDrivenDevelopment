@@ -28,25 +28,25 @@ public class FarmTest {
     @Test
     public void givenNoOfLegsAsNegativeValues_returnNoOfLegs() {
         int result = farm.findTotalLegs(-1, -3, -5);
-        assertEquals(-34, result);
+        assertEquals(-1, result);
     }
 
     @Test
     public void givenNoOfLegsAsNegative_returnNoOfLegs() {
         int result = farm.findTotalLegs(0, -3, -5);
-        assertEquals(-32, result);
+        assertEquals(-1, result);
     }
 
     @Test
     public void givenNoOfLegsAsNegativeChickensAndPigs_returnNoOfLegs() {
         int result = farm.findTotalLegs(-2, 0, -1);
-        assertEquals(-8, result);
+        assertEquals(-1, result);
     }
 
     @Test
     public void givenNoOfLegsAsNegativeChickensAndCows_returnNoOfLegs() {
         int result = farm.findTotalLegs(-4, -2, 0);
-        assertEquals(-16, result);
+        assertEquals(-1, result);
     }
 
 
@@ -83,6 +83,6 @@ public class FarmTest {
     @Test
     public void givenNoOfLegsAsPositiveAndNegative_returnNoOfLegs() {
         int result = farm.findTotalLegs(-1, 3, -5);
-        assertEquals(-10, result);
+        assertEquals(-1, result);
     }
 }

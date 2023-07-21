@@ -1,11 +1,19 @@
 package remainder;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.testng.Assert.assertEquals;
 
 public class RemainderTest {
+
+    private Reminder reminder;
+
+    @BeforeEach
+    public void setup() {
+        reminder = new Reminder();
+    }
 
     @Test
     public void nothing() {
@@ -24,7 +32,6 @@ public class RemainderTest {
 
    @Test
     public void remainderZeroAndOne_returns0() {
-        Reminder reminder = new Reminder();
         int result = reminder.findRemainder(0,1);
         assertEquals(0, result);
     }
@@ -40,28 +47,24 @@ public class RemainderTest {
 
     @Test
     public void remainderForOneAndThree_returns1() {
-        Reminder reminder = new Reminder();
         int result = reminder.findRemainder(1, 3);
         assertEquals(1, result);
     }
 
     @Test
     public void remainderForThreeAndFour_returns3() {
-        Reminder reminder = new Reminder();
         int result = reminder.findRemainder(3, 4);
         assertEquals(3, result);
     }
 
     @Test
     public void remainderForNegativeAndPostive_returnsNumber() {
-        Reminder reminder = new Reminder();
         int result = reminder.findRemainder(-9, 45);
         assertEquals(-9, result);
     }
 
     @Test
     public void remainderForFiveAndFive_returnsZero() {
-        Reminder reminder = new Reminder();
         int result = reminder.findRemainder(5, 5);
         assertEquals(0, result);
     }
