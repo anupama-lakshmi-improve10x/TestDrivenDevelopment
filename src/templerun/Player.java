@@ -4,6 +4,7 @@ public class Player {
 
     private String name;
     private int health;
+    private int totalCoinValue;
     private int score;
     public Player(String name) {
         this(name, 100);
@@ -26,11 +27,13 @@ public class Player {
     }
 
     public int getScore() {
+
+        score = totalCoinValue;
         return score;
     }
 
     public void collectCoin(Coin coin) {
-        this.score += coin.getValue();
+        this.totalCoinValue += coin.getValue();
     }
 
     public void run() {
