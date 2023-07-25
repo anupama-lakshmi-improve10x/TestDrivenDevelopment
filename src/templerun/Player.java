@@ -44,6 +44,10 @@ public class Player {
         System.out.println( name + " jumped to avoid obstacles!");
     }
 
+    public void reduceHealth(int damage) {
+        health -= damage;
+    }
+
     public class InvalidHealthException extends RuntimeException {
     }
 }

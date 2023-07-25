@@ -26,7 +26,7 @@ public class FireBallTest {
         }
 
         @Test
-        public void  given101_throwsInvalidForeBallSpeedException(){
+        public void  given101_throwsInvalidFireBallSpeedException(){
             assertThrows(FireBall.InvalidFireBallSpeedException.class,
                     () -> new FireBall(101),
                     "Fireball speed should be between 0 to 100");
