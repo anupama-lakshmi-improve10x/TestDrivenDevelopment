@@ -1,8 +1,9 @@
 package templerun;
 
-public class FireBall {
+public class FireBall extends Obstacle{
     private int points;
     public FireBall(int points) {
+        super("fireball", 30);
         this.points = points;
         if(points < 0 || points > 100) {
             throw new InvalidFireBallSpeedException();

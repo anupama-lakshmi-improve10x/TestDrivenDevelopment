@@ -2,8 +2,8 @@ package templerun;
 
 public class Obstacle {
 
-    private String name;
-    private int damage;
+    protected String name;
+    protected int damage;
     public Obstacle(String name, int damage) {
         this.name = name == null ? "" : name.trim();
         if(damage < 0 || damage > 100) {
