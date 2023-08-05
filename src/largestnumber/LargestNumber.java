@@ -11,7 +11,7 @@ public class LargestNumber {
             result = num[0];
         } else {
             result = num[0];
-            for (int i = 0; i< num.length; i++) {
+            for (int i = 1; i< num.length; i++) {
                 if(num[i] > result) {
                     result = num[i];
                 }
