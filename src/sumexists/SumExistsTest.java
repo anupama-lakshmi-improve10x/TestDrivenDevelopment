@@ -45,4 +45,11 @@ public class SumExistsTest {
         String array = sumExists.sumOfTwoArrays(new int[] {0,1}, 1);
         assertEquals("Yes", array);
     }
+
+    @Test
+    public void given012_returnNo() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {0, 1, 2}, 4);
+        assertEquals("No", array);
+    }
 }
