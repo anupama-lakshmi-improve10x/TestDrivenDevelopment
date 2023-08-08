@@ -66,4 +66,11 @@ public class SumExistsTest {
         String array = sumExists.sumOfTwoArrays(new int[] {2,6,5,8,11}, 9);
         assertEquals("No", array);
     }
+
+    @Test
+    public void given0234_returnNo() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {0,2,3,4}, 4);
+        assertEquals("Yes", array);
+    }
 }
