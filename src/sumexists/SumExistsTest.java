@@ -52,4 +52,18 @@ public class SumExistsTest {
         String array = sumExists.sumOfTwoArrays(new int[] {0, 1, 2}, 4);
         assertEquals("No", array);
     }
+
+    @Test
+    public void given265811_returnYes() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {2,6,5,8,11}, 14);
+        assertEquals("Yes", array);
+    }
+
+    @Test
+    public void given265811_returnNo() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {2,6,5,8,11}, 9);
+        assertEquals("No", array);
+    }
 }
