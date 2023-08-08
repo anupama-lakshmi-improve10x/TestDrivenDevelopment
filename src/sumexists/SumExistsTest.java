@@ -87,4 +87,18 @@ public class SumExistsTest {
         String array = sumExists.sumOfTwoArrays(new int[] {2,3,4}, 4);
         assertEquals("No", array);
     }
+
+    @Test
+    public void givenNegativeValue_returnYes() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {-2,-2,0}, -4);
+        assertEquals("Yes", array);
+    }
+
+    @Test
+    public void givenNegativeValue_returnNo() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {-2,-1,0}, -8);
+        assertEquals("No", array);
+    }
 }
