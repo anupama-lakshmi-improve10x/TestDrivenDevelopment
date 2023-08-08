@@ -68,9 +68,23 @@ public class SumExistsTest {
     }
 
     @Test
-    public void given0234_returnNo() {
+    public void given0234_returnYes() {
         SumExists sumExists = new SumExists();
         String array = sumExists.sumOfTwoArrays(new int[] {0,2,3,4}, 4);
         assertEquals("Yes", array);
+    }
+
+    @Test
+    public void given1234_returnYes() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {1,2,3,4}, 4);
+        assertEquals("Yes", array);
+    }
+
+    @Test
+    public void given234_returnNo() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {2,3,4}, 4);
+        assertEquals("No", array);
     }
 }
