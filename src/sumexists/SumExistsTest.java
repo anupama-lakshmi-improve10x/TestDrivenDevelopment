@@ -31,4 +31,18 @@ public class SumExistsTest {
         String oneValue = sumExists.sumOfTwoArrays(new int[] {1}, 0);
         assertEquals("No", oneValue);
     }
+
+    @Test
+    public void givenZeroOneValue_returnNo() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {0}, 0);
+        assertEquals("No", array);
+    }
+
+    @Test
+    public void givenZeroOneValue_returnYes() {
+        SumExists sumExists = new SumExists();
+        String array = sumExists.sumOfTwoArrays(new int[] {0,1}, 1);
+        assertEquals("Yes", array);
+    }
 }
