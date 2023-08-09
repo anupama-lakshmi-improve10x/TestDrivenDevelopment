@@ -46,4 +46,11 @@ public class SortTest {
         int[] sortValue = sortingArray.sorting(new int[] {0, 1, 0, 1});
         assertArrayEquals(new int[] {0, 0, 1, 1}, sortValue);
     }
+
+    @Test
+    public void givenArray_returnArray() {
+        SortingArray sortingArray = new SortingArray();
+        int[] sortValue = sortingArray.sorting(new int[] {0, 1, 0, 1, 2, 0, 2});
+        assertArrayEquals(new int[] {0, 0, 0, 1, 1, 2, 2}, sortValue);
+    }
 }
