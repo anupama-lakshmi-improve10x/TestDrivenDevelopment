@@ -34,9 +34,16 @@ public class SortTest {
     }
 
     @Test
-    public void giveArray_returnSortedArray() {
+    public void giveArray_returnSameArray() {
         SortingArray sortingArray = new SortingArray();
         int[] emptyValue = sortingArray.sorting(new int[] {0, 1});
         assertArrayEquals(new int[] {0, 1}, emptyValue);
+    }
+
+    @Test
+    public void givenArray_returnSortedArray() {
+        SortingArray sortingArray = new SortingArray();
+        int[] sortValue = sortingArray.sorting(new int[] {0, 1, 0, 1});
+        assertArrayEquals(new int[] {0, 0, 1, 1}, sortValue);
     }
 }
