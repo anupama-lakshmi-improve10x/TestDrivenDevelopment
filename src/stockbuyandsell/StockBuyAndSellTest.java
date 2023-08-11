@@ -30,4 +30,25 @@ public class StockBuyAndSellTest {
         int result = stockBuyAndSell.findMaxProfit(new int[] {0});
         assertEquals(0, result);
     }
+
+    @Test
+    public void givenOneValue_returnZero() {
+        StockBuyAndSell stockBuyAndSell = new StockBuyAndSell();
+        int result = stockBuyAndSell.findMaxProfit(new int[] {1});
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void givenOneZeroValue_returnZero() {
+        StockBuyAndSell stockBuyAndSell = new StockBuyAndSell();
+        int result = stockBuyAndSell.findMaxProfit(new int[] {0, 1});
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void givenZeroOneValue_returnZero() {
+        StockBuyAndSell stockBuyAndSell = new StockBuyAndSell();
+        int result = stockBuyAndSell.findMaxProfit(new int[] {1, 0});
+        assertEquals(0, result);
+    }
 }
