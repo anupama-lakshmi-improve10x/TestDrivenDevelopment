@@ -34,4 +34,35 @@ public class LeadersTest {
         exepected.add(0);
         assertEquals(exepected, list);
     }
+
+    @Test
+    public void given0123_returnThree() {
+        Leaders leaders = new Leaders();
+        ArrayList<Integer> list = leaders.findLeaders(new int[] {0,1,2,3}, 4);
+        ArrayList<Integer> exepected = new ArrayList<>();
+        exepected.add(3);
+        assertEquals(exepected, list);
+    }
+
+    @Test
+    public void given4710_return710() {
+        Leaders leaders = new Leaders();
+        ArrayList<Integer> list = leaders.findLeaders(new int[] {4,7,1,0}, 4);
+        ArrayList<Integer> exepected = new ArrayList<>();
+        exepected.add(7);
+        exepected.add(1);
+        exepected.add(0);
+        assertEquals(exepected, list);
+    }
+
+    @Test
+    public void givenArray_returnLeader() {
+        Leaders leaders = new Leaders();
+        ArrayList<Integer> list = leaders.findLeaders(new int[] {10,22,12, 3, 0, 6}, 4);
+        ArrayList<Integer> exepected = new ArrayList<>();
+        exepected.add(22);
+        exepected.add(12);
+        exepected.add(6);
+        assertEquals(exepected, list);
+    }
 }
