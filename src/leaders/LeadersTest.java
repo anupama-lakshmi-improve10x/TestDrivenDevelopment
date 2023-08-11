@@ -25,4 +25,13 @@ public class LeadersTest {
         ArrayList<Integer> list = leaders.findLeaders(new int[] {}, 0);
         assertEquals(new ArrayList<>(), list);
     }
+
+    @Test
+    public void givenOne_returnOne() {
+        Leaders leaders = new Leaders();
+        ArrayList<Integer> list = leaders.findLeaders(new int[] {1}, 1);
+        ArrayList<Integer> exepected = new ArrayList<>();
+        exepected.add(0);
+        assertEquals(exepected, list);
+    }
 }
